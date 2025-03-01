@@ -1,0 +1,28 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "brand": {
+        "@type": "Brand",
+        "name": "Ubiquiti"
+    },
+    "name": "Cloud Gateway Fiber",
+    "sku": "UCG-Fiber",
+    "description": "Desktop 10G Cloud Gateway with integrated 4-port 2.5 GbE switch, selectable NVR storage, and full UniFi application support.",
+    "url": "https://store.ui.com/us/en/products/ucg-fiber",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://cdn.ecomm.ui.com/products/48cf74fa-0456-4c5f-bbcc-c1a1ffdc11f9/5de9e511-3139-41bf-aaa0-29c29f4462d1.png",
+        "width": "1500",
+        "height": "1500"
+    },
+    "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/OutOfStock",
+        "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 279,
+            "priceCurrency": "USD",
+            "valueAddedTaxIncluded": false
+        }
+    }
+}
