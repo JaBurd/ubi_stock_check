@@ -1,0 +1,28 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "brand": {
+        "@type": "Brand",
+        "name": "Ubiquiti"
+    },
+    "name": "Cloud Gateway Ultra",
+    "sku": "UCG-Ultra",
+    "description": "Compact Cloud Gateway with 30+ UniFi device / 300+ client support, 1 Gbps IPS routing, and multi-WAN load balancing.",
+    "url": "https://store.ui.com/us/en/products/ucg-ultra",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://cdn.ecomm.ui.com/products/8d2d9e4b-89f3-49a1-9c17-5d774c0067b4/e1f7fa88-79c8-45ec-a234-bdf069c546ad.png",
+        "width": "1500",
+        "height": "1500"
+    },
+    "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": 129,
+            "priceCurrency": "USD",
+            "valueAddedTaxIncluded": false
+        }
+    }
+}
