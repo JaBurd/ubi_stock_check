@@ -1,6 +1,5 @@
 from slack_sdk.webhook import WebhookClient
 from bs4 import BeautifulSoup
-import time
 import requests
 import json
 import os
@@ -10,14 +9,24 @@ TARGET_URL = "https://store.ui.com/us/en/products/" + os.environ.get('UBI_PRODUC
 def notify(product, url):
     webhook = WebhookClient(os.environ.get('SLACK_WEBHOOK_URL'))
 
-    response = webhook.send(text="The " + product + " is available! URL: " + url)
+    response = webhook.send(
+    text="fallback",
+    blocks=[
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "The " + product + " is available!:\n*<" + url + "|" + product +">*"
+            }
+        }
+    ]
+)
     assert response.status_code == 200
     assert response.body == "ok"
     print("Notified!")
 def scrape():
     page = requests.get(TARGET_URL)
     soup = BeautifulSoup(page.content, "html.parser")
-    # time.sleep(60)
 
     product_json = soup.find(id="product-jsonld")
     
