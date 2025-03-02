@@ -10,7 +10,7 @@ def notify(product, url):
     webhook = WebhookClient(os.environ.get('SLACK_WEBHOOK_URL'))
 
     response = webhook.send(
-    text="fallback",
+    text=product + " Available!",
     blocks=[
         {
             "type": "section",
